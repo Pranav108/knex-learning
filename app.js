@@ -3,7 +3,7 @@ var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 var bodyParser = require("body-parser");
 
-var indexRouter = require("./routes/index");
+var userRouter = require("./routes/user.routes");
 
 var app = express();
 
@@ -24,7 +24,7 @@ const db = require("knex")({
 
 app.set("db", db);
 
-app.use("/", indexRouter);
+app.use("/", userRouter);
 
 app.listen(3000, () => {
   console.log(`Server listening at http://localhost:3000`);
