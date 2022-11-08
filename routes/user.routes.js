@@ -1,6 +1,5 @@
 const express = require("express");
 const router = express.Router();
-const UsersService = require("../module/user.models.js");
 const userController = require("../controller/user.controller");
 
 router.get("/seed", userController.seeder);
